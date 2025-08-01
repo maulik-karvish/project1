@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 2.5rem 2rem 2rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.3s;
+    }
+
+    .login-container:hover {
+      box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.25);
+    }
+
+    .login-container h2 {
+      margin-bottom: 2rem;
+      color: #333;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .login-container form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .input-group {
+      position: relative;
+      width: 100%;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f9f9f9;
+      transition: border 0.2s;
+      outline: none;
+    }
+
+    .input-group input:focus {
+      border: 1.5px solid #74ebd5;
+      background: #fff;
+    }
+
+    .input-group .icon {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #b0b0b0;
+      font-size: 1.1rem;
+      pointer-events: none;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 0.75rem;
+      background: linear-gradient(90deg, #74ebd5 0%, #ACB6E5 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(172, 182, 229, 0.2);
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .login-container button:hover {
+      background: linear-gradient(90deg, #ACB6E5 0%, #74ebd5 100%);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .login-container .forgot {
+      margin-top: 1rem;
+      text-align: right;
+      width: 100%;
+    }
+
+    .login-container .forgot a {
+      color: #74ebd5;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .login-container .forgot a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <div class="input-group">
+        <input type="text" placeholder="Username" required>
+        <span class="icon"><i class="fa fa-user"></i></span>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Password" required>
+        <span class="icon"><i class="fa fa-lock"></i></span>
+      </div>
+      <button type="submit">Login</button>
+      <div class="forgot">
+        <a href="#">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+</body>
